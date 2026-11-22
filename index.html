@@ -163,7 +163,7 @@
     try {
       AC = new (window.AudioContext || window.webkitAudioContext)();
       engOsc = AC.createOscillator(); engOsc.type = 'sawtooth'; engOsc.frequency.value = 55;
-      engFilter = AC.createBiquadFilter(); engFilter.type = 'lowpass'; engFilter.frequency.value = 420;
+      engFilter = AC.createBiquadFilter(); engFilter.type = 'lowpass'; engFilter.frequency.value = 760;
       engGain = AC.createGain(); engGain.gain.value = 0;
       engOsc.connect(engFilter); engFilter.connect(engGain); engGain.connect(AC.destination);
       engOsc.start();
@@ -211,7 +211,8 @@
     var on = (state === 'playing' && !muted);
     var rpm = 55 + Math.abs(car.v) * 0.42;
     engOsc.frequency.setTargetAtTime(rpm, AC.currentTime, 0.06);
-    engGain.gain.setTargetAtTime(on ? 0.045 : 0, AC.currentTime, 0.09);
+    engFilter.frequency.setTargetAtTime(600 + rpm * 3.2, AC.currentTime, 0.06);
+    engGain.gain.setTargetAtTime(on ? 0.06 : 0, AC.currentTime, 0.09);
   }
   var I18N = {
     ko: { gameTitle: 'XC40 드라이브', hudCoin: '코인', hudTime: '시간', sec: '초', sndOn: '사운드 ON', sndOff: '사운드 OFF',
