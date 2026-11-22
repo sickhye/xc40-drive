@@ -36,8 +36,8 @@
   .overlay h1 { margin: 0; font-size: 30px; letter-spacing: 1px; }
   .overlay h2 { margin: 0; font-size: 22px; }
   .overlay p { margin: 0; font-size: 13px; color: var(--hatch-widget-muted); }
-  .title-art { width: min(350px, 76%); border-radius: 10px; }
-  .finish-art { width: min(170px, 48%); border-radius: 10px; }
+  .title-art { height: min(38%, 260px); width: auto; max-width: 82%; border-radius: 10px; }
+  .finish-art { height: min(30%, 150px); width: auto; max-width: 55%; border-radius: 10px; }
   .big-btn { font: inherit; font-size: 17px; font-weight: 700; padding: 12px 34px; border-radius: 999px; border: none; background: var(--hatch-widget-accent); color: var(--hatch-widget-on-accent); cursor: pointer; }
   .board { font-size: 13px; min-width: 240px; }
   .board .row { display: flex; justify-content: space-between; gap: 18px; padding: 3px 8px; border-bottom: 1px solid var(--hatch-widget-border); }
@@ -50,14 +50,16 @@
   @media (max-height: 500px) {
     .page { padding: 0; }
     .page canvas { width: 100%; height: 100dvh; object-fit: contain; }
-    .title-art { width: min(215px, 38%); }
-    .finish-art { width: min(120px, 30%); }
+    .title-art { height: min(36%, 150px); width: auto; }
+    .finish-art { height: min(28%, 100px); width: auto; }
   }
   @media (max-width: 600px) {
     .overlay { gap: 7px; padding: 10px; justify-content: flex-start; }
     .overlay h1 { font-size: 20px; }
     .overlay h2 { font-size: 18px; }
-    .title-art { width: min(160px, 44%); }
+    .title-art { height: min(34%, 120px); width: auto; max-width: 60%; }
+    .finish-art { height: min(26%, 90px); width: auto; }
+    .overlay p { font-size: 12px; }
     #boardTitle { display: none; }
     .hudbar { flex-wrap: nowrap; gap: 4px; }
     .hudbar button.key { position: absolute; right: 0; }
@@ -70,7 +72,7 @@
     .msg { top: 42px; font-size: 12px; left: 8px; right: 100px; transform: none; width: auto; max-width: none; }
     button.resetbtn { height: 40px; font-size: 12px; padding: 0 8px; min-width: 0; }
     .finish-art { width: min(140px, 42%); }
-    .big-btn { font-size: 15px; padding: 10px 26px; }
+    .big-btn { font-size: 14px; padding: 8px 22px; }
     button.padbtn { width: 56px; height: 56px; font-size: 22px; }
     button.pedal { width: 68px; height: 56px; font-size: 12px; }
     .board { min-width: 0; width: 100%; max-width: 280px; }
