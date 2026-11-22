@@ -24,7 +24,7 @@
   .hudbar .spd2 b { font-size: 20px; }
   .hudbar .hudsp { flex: 1; }
   .hudbar button.key { pointer-events: auto; background: rgba(18,22,18,0.55); color: #fff; border: 1px solid rgba(255,255,255,0.35); height: 30px; min-width: 0; font-size: 12px; padding: 0 9px; }
-  .msg { position: absolute; top: 46px; left: 0; right: 0; z-index: 4; pointer-events: none; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.65); }
+  .msg { position: absolute; top: 46px; left: 50%; transform: translateX(-50%); width: max-content; max-width: 94%; z-index: 4; pointer-events: none; color: #fff; font-weight: 600; background: rgba(18,22,18,0.55); border-radius: 999px; padding: 4px 14px; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
   .pads { position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 4; display: none; align-items: flex-end; padding: 0; flex-wrap: nowrap; }
   @media (pointer: coarse) { .pads { display: flex; } }
   button.padbtn, button.pedal, button.resetbtn { background: rgba(18,22,18,0.45); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
@@ -46,7 +46,7 @@
   .name-row { display: flex; gap: 6px; }
   .name-row input { font: inherit; font-size: 14px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--hatch-widget-border); background: var(--hatch-widget-surface); color: var(--hatch-widget-text); width: 150px; }
   .stage { position: relative; }
-  .msg { text-align: center; font-size: 13px; color: var(--hatch-widget-muted); min-height: 18px; padding: 2px; }
+  .msg { text-align: center; font-size: 13px; min-height: 18px; }
   @media (max-height: 500px) {
     .page { padding: 0; }
     .page canvas { width: 100%; height: 100dvh; object-fit: contain; }
@@ -67,7 +67,7 @@
     .hudbar .chip b { font-size: 13px; }
     .hudbar .spd2 b { font-size: 15px; }
     .hudbar button.key { height: 26px; font-size: 11px; padding: 0 6px; white-space: nowrap; flex: none; }
-    .msg { top: 42px; font-size: 12px; padding-right: 104px; }
+    .msg { top: 42px; font-size: 12px; left: 8px; right: 100px; transform: none; width: auto; max-width: none; }
     button.resetbtn { height: 40px; font-size: 12px; padding: 0 8px; min-width: 0; }
     .finish-art { width: min(140px, 42%); }
     .big-btn { font-size: 15px; padding: 10px 26px; }
